@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Estos estilos pueden ir en su archivo global.css o tailwind.css */
+
+@keyframes flyToCart {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0.1) translate(var(--translate-x), var(--translate-y));
+      opacity: 0;
+    }
+  }
+  
+  @keyframes shrinkItem {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(0.9) rotate(-5deg);
+    }
+    50% {
+      transform: scale(0.8) rotate(5deg);
+    }
+    75% {
+      transform: scale(0.7) rotate(-3deg);
+    }
+    100% {
+      transform: scale(0.6) rotate(0deg);
+    }
+  }
+  
+  @keyframes cartBounce {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.2); }
+    40% { transform: scale(0.9); }
+    60% { transform: scale(1.1); }
+    80% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+  }
+  
+  .animate-cartBounce {
+    animation: cartBounce 0.5s ease-in-out;
+  }
+  
+  .toast-success {
+    background-color: #10B981 !important;
+  }
